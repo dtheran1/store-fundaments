@@ -4,3 +4,39 @@
   overflow: auto;
   background: red;
 }
+
+.products--grid {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    h2,
+    p {
+      margin: 0;
+    }
+  }
+}
+
+//  Tablets
+@media screen and (min-width: 40em) and (max-width: 63.9em){
+  .products--grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+}
+
+// web
+@media screen and (min-width: 64em) {
+  .products--grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+  }
+}

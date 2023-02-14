@@ -64,12 +64,13 @@
   <h1>
     ngFor para objetos
   </h1>
-  <div *ngFor="let product of products">
-    <img width="100" [src]="product.image" alt="">
-    <h2> {{ product.name }} </h2>
-    <p> {{ product.price }} </p>
+  <div class="products--grid">
+    <div *ngFor="let product of products">
+      <img [src]="product.image" alt="">
+      <h2> {{ product.name }} </h2>
+      <p> {{ product.price }} </p>
+    </div>
   </div>
-
   <hr>
 </div>
 <h2>Hola, soy {{ person.name }} y tengo {{ person.age }} de edad</h2>
