@@ -7,6 +7,7 @@ import { Prodcut } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10
   title = 'store-fundaments';
   name = 'Daniel'
   age =30

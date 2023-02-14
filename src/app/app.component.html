@@ -1,25 +1,37 @@
 <h1>Hola Mundo</h1>
 
 <div>
-  <h1>
-    ngSwitch
-  </h1>
+  <h1>Clases y estilos</h1>
+  <input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name" />
+  <p class="messageError" [class.invalid]="nameInput2.invalid">
+    Este campo es requerido!.
+  </p>
+  <label for="Nombe">Nombre</label>
+  <input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name" />
+  <p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Texto</p>
+
+  <div class="styles">
+    <div>
+      <input type="text" [(ngModel)]="widthImg" />
+    </div>
+    <div>
+      <img [style.width.%]="widthImg" [src]="img" alt="img" />
+    </div>
+  </div>
+  <hr />
+</div>
+
+<div>
+  <h1>ngSwitch</h1>
   <input type="text" required [(ngModel)]="person.name" />
 
   <div [ngSwitch]="person.name">
-    <p *ngSwitchCase="'daniel'">
-      La persona es Daniel
-    </p>
-    <p *ngSwitchCase="'eberlin'">
-      La persona es Eberlin
-    </p>
-    <p *ngSwitchDefault>
-      No hay match con ninguno
-    </p>
-
+    <p *ngSwitchCase="'daniel'">La persona es Daniel</p>
+    <p *ngSwitchCase="'eberlin'">La persona es Eberlin</p>
+    <p *ngSwitchDefault>No hay match con ninguno</p>
   </div>
 
-  <hr>
+  <hr />
 </div>
 
 <div>
@@ -54,24 +66,21 @@
   </ul>
 
   <p>Agrega un emoji</p>
-  <input type="text" [(ngModel)]="newEmoji">
+  <input type="text" [(ngModel)]="newEmoji" />
   <button (click)="addEmoji()">Add Emoji!</button>
   <hr />
 </div>
 
-
 <div>
-  <h1>
-    ngFor para objetos
-  </h1>
+  <h1>ngFor para objetos</h1>
   <div class="products--grid">
     <div *ngFor="let product of products">
-      <img [src]="product.image" alt="">
-      <h2> {{ product.name }} </h2>
-      <p> {{ product.price }} </p>
+      <img [src]="product.image" alt="" />
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.price }}</p>
     </div>
   </div>
-  <hr>
+  <hr />
 </div>
 <h2>Hola, soy {{ person.name }} y tengo {{ person.age }} de edad</h2>
 
