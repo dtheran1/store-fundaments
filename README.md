@@ -1,5 +1,8 @@
 # StoreFundaments
 
+![image](https://user-images.githubusercontent.com/83596975/218920046-6a6bcfbe-720d-4e73-880e-bc0e12d1fae1.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
 
 ## Development server
