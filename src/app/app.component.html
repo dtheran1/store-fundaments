@@ -1,6 +1,31 @@
 <h1>Hola Mundo</h1>
 
 <div>
+  <h1>Formularios</h1>
+
+  <form (ngSubmit)="onRegister()" #myForm="ngForm">
+    <div class="input-group">
+      <label for="name">Nombre</label>
+      <input #name="ngModel" type="text" name="name" required id="name" [(ngModel)]="register.name">
+      <p *ngIf="name.invalid">Mensajes de error</p>
+    </div>
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input #email="ngModel" type="text" name="email" required id="email" [(ngModel)]="register.email">
+      <p *ngIf="email.invalid">Mensajes de error</p>
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input #password="ngModel" type="password" name="password" required id="password" [(ngModel)]="register.password">
+      <p *ngIf="password.invalid">Mensajes de error</p>
+    </div>
+
+    <button type="submit" [disabled]="myForm.invalid">Registrar</button>
+    <button type="button">Accion</button>
+  </form>
+</div>
+
+<div>
   <h1>Ng Class & NgStyle</h1>
   <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name" />
   <hr class="line-error" [ngClass]="{'valid': nameInput4.valid, 'invalid': nameInput4.invalid}" />

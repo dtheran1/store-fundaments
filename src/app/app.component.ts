@@ -16,6 +16,17 @@ export class AppComponent {
 
   btnDisable = true
 
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
+
+  onRegister() {
+    console.log(this.register);
+
+  }
+
   box = {
     width:100,
     height: 100,
