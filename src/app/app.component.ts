@@ -16,6 +16,12 @@ export class AppComponent {
 
   btnDisable = true
 
+  box = {
+    width:100,
+    height: 100,
+    background: 'red'
+  }
+
   person= {
     name: 'Daniel',
     age: 99,

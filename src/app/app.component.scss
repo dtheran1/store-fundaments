@@ -55,3 +55,15 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
+.line-error {
+  height: 0;
+  border-bottom: 1px solid;
+  &.invalid{
+    // border-bottom: 10px solid;
+    border-color: red;
+  }
+  &.valid{
+    border-color: green;
+  }
+}
