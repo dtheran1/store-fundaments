@@ -24,7 +24,7 @@
 }
 
 //  Tablets
-@media screen and (min-width: 40em) and (max-width: 63.9em){
+@media screen and (min-width: 40em) and (max-width: 63.9em) {
   .products--grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -45,7 +45,7 @@
   color: red;
   background: rgb(65, 53, 53);
   opacity: 0;
-  transition: all linear .5s;
+  transition: all linear 0.5s;
   &.invalid {
     opacity: 1;
   }
@@ -59,11 +59,52 @@
 .line-error {
   height: 0;
   border-bottom: 1px solid;
-  &.invalid{
+  &.invalid {
     // border-bottom: 10px solid;
     border-color: red;
   }
-  &.valid{
+  &.valid {
     border-color: green;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid gray;
+  padding: 10px;
+  background: #979595;
+  width: 60%;
+  margin: 0 auto;
+  .input-group {
+    display: grid;
+    margin: 20px 0;
+    label {
+      // margin-right: 2px;
+    }
+    p {
+      margin: 0;
+      color: red;
+      background: rgb(236, 183, 183);
+    }
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  button{
+    outline: none;
+    background: rgb(164, 185, 164);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all ease-out .5s;
+    &:hover {
+      background: green;
+    }
   }
 }
